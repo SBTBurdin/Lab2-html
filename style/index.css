@@ -1,0 +1,21 @@
+.paddingTop {
+    padding-top: 7px;
+}
+
+.no-gutter {
+    padding-right:0;
+    padding-left:0;
+}
+
+.no-gutterAll > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.dateWidth {
+    max-width: 150px;
+}
+
+.paddingRight {
+    padding-right: 0px;
+}

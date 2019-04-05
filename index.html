@@ -8,13 +8,141 @@
     <script src="libs/js/jquery-3.3.1.min.js"></script>
     <script src="libs/js/popper.min.js"></script>
     <script src="libs/js/bootstrap.min.js"></script>
-    <!--моё г-->
+
     <script src="scripts/index.js"></script>
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
 
-<div class="container">
-    
+<!--<div class="header">-->
+    <!--<div class="col-md-12">-->
+        <!--<p class="lead">Распределение времени работы с ресурсами</p>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="container paddingTop">
+    <div class="row">
+        <!--Добавление новых данных-->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Добавление данных</div>
+                <div class="panel-body">
+                    <!--юзвери-->
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Пользователи</div>
+                            <div class="panel-body">
+                                <div class="col-md-4 paddingTop">
+                                    <span>Логин:</span>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" name="newUserLogin" id="newUserLogin">
+                                </div>
+                                <div class="col-md-4 paddingTop">
+                                    <span>Пароль:</span>
+                                </div>
+                                <div class="col-md-8 paddingTop">
+                                    <input type="password" class="form-control" name="newUserPass" id="newUserPass">
+                                </div>
+                                <div class="col-md-12" style="color: #8c8c8c">
+                                    <span>Зачем пароль если нет авторизации? Не знаю ¯\_(ツ)_/¯</span>
+                                </div>
+                                <div class="col-md-12 paddingTop">
+                                    <button type="button" class="btn btn-primary paddingTop" id="saveUser">
+                                        Добавить
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--файлы-->
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Файлы</div>
+                            <div class="panel-body">
+                                <div class="col-md-4 paddingTop">
+                                    <span>Название файла:</span>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="newFileName">
+                                </div>
+                                <div class="col-md-12 paddingTop">
+                                    <button type="button" class="btn btn-primary paddingTop" id="saveFile">
+                                        Добавить
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Блок с выбором. Основа-->
+    <div class="row">
+        <div class="col-md-12">
+            <p class="lead">Распределение времени работы с ресурсами</p>
+        </div>
+        <!--Левая часть-->
+        <div class="col-md-6">
+            <div class="table-responsive margin-10" id="tableInfo">
+                <table class="table-bordered table-condensed" border="1" style="width: 100%" id="infoTable">
+                    <thead>
+                    <tr>
+                        <th>Название файла</th>
+                        <th>с</th>
+                        <th>по</th>
+                        <th>кто</th>
+                        <th>Действие</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--Правая часть-->
+        <div class="col-md-6">
+            <div class="col-md-4">
+                <span>Выберите пользователя:</span>
+            </div>
+            <div class="col-md-8">
+                <select class="form-control" size="1" name="allUsers" id="allUsers" readonly=""></select>
+            </div>
+            <!--Дата-->
+            <div class="col-md-12 paddingTop no-gutter">
+                <span class="col-md-4 paddingTop">Пользоваться с</span>
+                <span class="col-md-3 paddingRight">
+                    <input type="date" class="form-control" id="dateFrom">
+                </span>
+                <span class="col-md-1 paddingTop">по</span>
+                <span class="col-md-3 paddingRight">
+                    <input type="date" class="form-control" id="dateTo">
+                </span>
+            </div>
+            <div class="col-md-12 paddingTop">
+                <button type="button" class="btn btn-primary paddingTop" name="reloadUsers" id="reloadUsers">
+                    Обновить списокпользователей
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--для тестов-->
+    <div class="row paddingTop">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-primary" name="testButton" id="testButton">Test button</button>
+            <button type="button" class="btn btn-primary" name="testRest" id="testRest">Test rest</button>
+        </div>
+    </div>
 </div>
 
 </body>
